@@ -17,7 +17,7 @@ We experimented with decision tree (baseline model), logistic regression, random
 -- Map Reduce for Gradient Descrent update
 In order to implement Logistic Regression from scratch, we have to implement Gradient Descent steps to update the current model parameters. We applied Map Reduce method to implement Gradient update at scale. For every step, we first transform the DataRDD to the predictRDD via the sigmoid mapper function. Then, we compute the gradient using another mapper function to compute the dot product of all features and the delta between predicted value and actual value. Finally applying the regularzation parameters and the learning rate to form the new model.
 
--- Sparse and Dense representation for one-hot encoding
+-- Sparse and dense representation for one-hot encoding
 In order to allow for further expansion of one-hot categories in future for modeling exploration and improvement, we make an optimization to expand to the full one-hot vector only when needed for computation. This will enable us for memory usage optimization, we process the RDD in its original form to store the one-hot indices in dense formation. Then it is broadcasted to all executers. During the subsequent dot product computations, we would transform the densed one-hot indices into the full one-hot vector dimensions for calculation. As a result, we never incur the memory overhead of storing the entire expanded one-hot encoded RDD in memory.
 
 ![diagram](feature_diagram.png)
