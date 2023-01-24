@@ -1,5 +1,7 @@
 # Airline Partner Recommendation to Electronic Arts
 
+Team: Kris Junghee Lee, Cynthia Zhu, Bo He, Bruce Lam
+
 ## Introduction
 Accurate prediction of flight delay is crucial for airlines and their customers because of the cascading consequences of any given flight anomaly on both the carriers and the passengers. Our motivation for creating models to predict flight delays is that we are a data science consultancy hired by Electronic Arts, a large corporation operating in the gaming industry to identify and recommend airline carriers to partner with for an exclusivity agreement. We aim to predict flight delays in advance so that we can help EA avoid missed opportunities company wide by anticipating and making sound decisions when these situations arise.
 
